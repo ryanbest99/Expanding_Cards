@@ -1,16 +1,15 @@
-const panels = document.querySelectorAll(".panel");
-console.log(panels);
+const boxes = document.querySelectorAll(".box");
+console.log(boxes);
 
-panels.forEach(function (panel) {
-  panel.addEventListener("click", function () {
-    console.log("clicked");
+boxes.forEach(function (box) {
+  box.addEventListener("click", function () {
     removeActiveClass();
-    panel.classList.add("active");
+    box.classList.add("active");
   });
 });
 
-const removeActiveClass = function () {
-  panels.forEach(function (panel) {
-    panel.classList.remove("active");
+function removeActiveClass() {
+  boxes.forEach(function (box) {
+    box.classList.remove("active");
   });
-};
+}
