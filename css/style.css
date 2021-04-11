@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
+/* 
+==========
+Global Settings 
+==========
+*/
+
 * {
+  /* margin: 0;
+  padding: 0; */
   box-sizing: border-box;
 }
 
@@ -12,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   height: 100vh;
   overflow: hidden;
 }
@@ -20,4 +28,60 @@ body {
 h1 {
   border: 1px solid red;
   margin: 0;
+}
+
+.container {
+  border: 3px solid red;
+  display: flex;
+  justify-content: center;
+  width: 90vw;
+  max-width: 1072px;
+  margin: 0 auto;
+}
+
+.one {
+  background: url(../images/nyc/DSC00451.JPG);
+}
+.two {
+  background: url(../images/nyc/DSC00578.JPG);
+}
+.three {
+  background: url(../images/nyc/DSC00672.JPG);
+}
+.four {
+  background: url(../images/nyc/DSC00685.JPG);
+}
+.five {
+  background: url(../images/nyc/DSC00717.JPG);
+}
+
+.panel {
+  border: 3px solid green;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  position: relative;
+  transition: flex 0.7s ease-in;
+  margin: 1rem;
+}
+
+.panel h3 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
 }

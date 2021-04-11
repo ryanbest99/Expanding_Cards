@@ -1,0 +1,81 @@
+/* 
+=========
+Global Settings
+=========
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  border: 5px solid blue;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../images/nyc/DSC09372.JPG) center/cover no-repeat;
+}
+
+.container {
+  border: 3px solid black;
+  height: 100vh;
+  margin: 0 auto;
+  /* flex setting */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.one {
+  background: url(../images/nyc/IMG_2296.JPG);
+}
+.two {
+  background: url(../images/nyc/IMG_2234.JPG);
+}
+.three {
+  background: url(../images/nyc/IMG_3078.JPG);
+}
+.four {
+  background: url(../images/nyc/DSC00685.JPG);
+}
+.five {
+  background: url(../images/nyc/DSC09423.JPG);
+}
+.six {
+  background: url(../images/nyc/DSC09429.JPG);
+}
+.seven {
+  background: url(../images/nyc/DSC09157.JPG);
+}
+
+.box {
+  border: 3px dashed green;
+  /* height: 50vh; */
+  margin-bottom: 1rem;
+  text-align: center;
+  flex: 1;
+  cursor: pointer;
+  transition: flex 0.7s ease-in;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.box.active {
+  flex: 5;
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .box {
+    max-height: 1000px;
+    margin-right: 1rem;
+    height: 50vh;
+  }
+}
